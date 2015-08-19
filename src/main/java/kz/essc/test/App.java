@@ -53,7 +53,16 @@ public class App {
 			
 			average = average/map.get(key).size();
 			answer.put(key, average);
-			out.println(key + " " + average);
+			
+			out.print(key + " ");
+			
+			int intValue = 0;
+			if (average%1==0) {
+				intValue = (int)average;
+				out.println(intValue);
+			}
+			else
+				out.println(average);
 		}
 		out.close();
 		
